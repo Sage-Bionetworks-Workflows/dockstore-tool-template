@@ -7,7 +7,11 @@ stdout: out.txt
 
 hints:
   DockerRequirement:
-    dockerPull: sagebionetworks/dockstore-tool-template:0.0.11
+    dockerPull: sagebionetworks/dockstore-tool-template:{{{ version }}}
+
+arguments:
+- $(inputs.message)
+
 inputs:
   message:
     type: string
